@@ -21,15 +21,23 @@ function displayTask(list) {
     list.map(item => {
         li.id = item.id
         li.innerHTML = `
-            ${item.text} 
+            <input  class='input-task' value=${item.text}>
             <button class='delete-task'>del</button>
             <button class='toggle-task'>+</button>
+            <button class='edit-task'>edit</button>
         `;
     })
     
     parent.append(li);
     deleteCurrentTask(list);
-    createChangeDone(list, li)
+    createChangeDone(list, li);
+    createEditTask(li, list);
+
+    li.querySelectorAll('.edit-task').forEach(item => {
+        item.addEventListener('click', () => {
+
+        })
+    })
 };
 
 
@@ -63,8 +71,10 @@ function deleteCurrentTask(list) {
     })
 }
 
+
+// toggle color
 function createChangeDone(list, elem) {
-    elem.querySelectorAll('.toggle-task').forEach(item => {
+    elem.querySelectorAll('.toggle-task').forEach(item => { 
         item.addEventListener('click', (e) => {
             let id = e.target.parentNode.id;
             let current = e.target.parentNode;
@@ -81,5 +91,33 @@ function createChangeDone(list, elem) {
 }
 
 function toggleColorText(current, elem) {
-    elem.done ? current.style.color = 'green' : current.style.color = 'black'
+    console.log(current);
+    elem.done ? current.style.background = 'green' : current.style.background = 'none'
+}
+
+// edit task
+function createEditTask(elem, list) {
+    elem.querySelectorAll('.input-task').forEach(item => {
+        item.addEventListener('input', (e) => {
+            let id = e.target.parentNode.id;
+            let value = e.target.value;
+
+            item.innerHTML = e.target.value;
+            
+            handleClick(elem, list, id, value);
+
+        })  
+    })
+}
+
+function handleClick(elem, list, id, value) {
+    elem.querySelectorAll('.edit-task').forEach(item => {
+        item.addEventListener('click', () => {
+            list.map(i => {
+                if (i.id == id) {
+                    i.text = value;
+                }
+            })
+        })
+    })
 }
