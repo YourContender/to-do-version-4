@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('./bg.jpg') center center/cover no-repeat;
+}
+
+.container {
+    margin: 0 auto; 
+    text-align: center;
+    width: 1200px;
+    min-height: 800px;
+}
+
+.container_form {
+    padding-top: 50px;
+}
+
+.input {
+    width: 450px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 15px;
+    background: rgba(228, 222, 222, 0.678);
+    border: none;
+}
+
+.btn {
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
+    border:none;
+    background-color: rgba(39, 39, 173, 0.849);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.class-list { 
+    width: 750px;
+    margin: 30px auto;
+}
+
+.list {
+    height: 550px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.current-elem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    background: rgba(228, 222, 222, 0.486);
+    height: 45px;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+.input-task {
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 22px;
+    /* letter-spacing: 2px; */
+    color: #000;
+    border: none;
+    background: rgba(228, 222, 222, 0.137);
+    font-family: 'Noto Serif Display', serif;
+    /* text-transform: uppercase; */
+}
+
+.delete-task {
+    width: 50px;
+    height: 30px;
+    border-radius: 7px;
+    font-size: 16px;
+    border:none;
+    background-color: rgba(173, 39, 39, 0.849);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.delete-task:hover {
+    background-color: rgba(173, 39, 39);
+}
+
+.delete-task:active {
+    background-color: rgb(212, 18, 18);
+}
+
+.toggle-task {
+    width: 50px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 7px;
+    border:none;
+    background-color: rgba(4, 212, 66, 0.849);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.toggle-task:hover {
+    background-color:  rgba(4, 212, 66);
+}
+
+.toggle-task:active {
+    background-color: rgb(8, 235, 76);
+}
+
+.edit-task {
+    width: 50px;
+    height: 30px;
+    font-size: 19px;
+    border-radius: 7px;
+    border:none;
+    background-color: rgba(54, 63, 143, 0.849);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.edit-task:hover {
+    background-color: rgba(54, 63, 143);
+}
+
+.edit-task:active {
+    background-color: rgb(12, 33, 223);
+}

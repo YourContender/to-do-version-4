@@ -22,9 +22,9 @@ function displayTask(list) {
         li.id = item.id
         li.innerHTML = `
             <input  class='input-task' value=${item.text}>
-            <button class='delete-task'>del</button>
-            <button class='toggle-task'>+</button>
-            <button class='edit-task'>edit</button>
+            <button class='delete-task'>❌</button>
+            <button class='toggle-task'>✅</button>
+            <button class='edit-task'>⚙</button>
         `;
     })
     
@@ -91,8 +91,8 @@ function createChangeDone(list, elem) {
 }
 
 function toggleColorText(current, elem) {
-    console.log(current);
-    elem.done ? current.style.background = 'green' : current.style.background = 'none'
+    // console.log(current);
+    elem.done ? current.style.background = 'green' : current.style.background = 'rgba(228, 222, 222, 0.678)'
 }
 
 // edit task
